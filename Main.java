@@ -6,23 +6,18 @@ import java.lang.*;
 public class Main {
 
 //    інкапсуляція - механізм мови програмування, який обмежує доступ до складових об'єкта компонентів
+//    конструктор без типу даних
 
-
-    static Cat cat = new Cat();
-    static People people = new People();
+    static Cat cat;
+    static People people;
 
 
     public static void main(String[] args) {
 
-        cat.setName("Бакс");
-        cat.setPoroda("Персицький");
-        cat.setAge(3);
+        cat = new Cat(2, "персицький", "Бакс");
 
-
-        people.setName("Віка");
-        people.setLastName("Міщанин");
-        people.setAge(18);
-        people.setCat(cat);
+        people = new People("Віка", "Міщанин", 18, cat);
+        people.getCat().setName("Джордж");
 
         System.out.println(people);
         cat.say();
