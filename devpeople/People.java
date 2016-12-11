@@ -50,6 +50,9 @@ public class People {
         this.cat = cat;
     }
 
+    public void sayHello(){
+        System.out.println("Hello");
+    }
 
 
 
